@@ -207,12 +207,13 @@ textarea {
 
 .cardBtn {
   margin-top: 18px;
-  background: #f3ede5;
-  color: var(--foreground);
+  background: rgba(168, 92, 44, 0.1);
+  color: var(--primary);
 }
 
 .cardBtn:hover {
-  background: #e9dfd3;
+  background: var(--primary);
+  color: white;
 }
 
 .features {
