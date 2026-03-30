@@ -14,7 +14,7 @@ const circuitos: Record<
     title: "Marrakech & Deserto",
     duration: "5 dias",
     price: "Desde 699€",
-    image: "https://images.unsplash.com/photo-1501785888041-af3ef285b470",
+    image: "https://images.unsplash.com/photo-1539020140153-e479b8c22e70",
     description:
       "Uma viagem intensa entre a energia de Marrakech, as paisagens do Atlas e a experiência inesquecível de dormir no deserto.",
     highlights: [
@@ -36,7 +36,7 @@ const circuitos: Record<
     title: "Cidades Imperiais",
     duration: "7 dias",
     price: "Desde 949€",
-    image: "https://images.unsplash.com/photo-1548013146-72479768bada",
+    image: "https://images.unsplash.com/photo-1489493887464-892be6d1daae",
     description:
       "Um circuito cultural por algumas das cidades mais emblemáticas de Marrocos, com foco na história, arquitetura e tradições locais.",
     highlights: [
@@ -98,7 +98,7 @@ export default async function CircuitoPage({ params }: Props) {
     return (
       <main style={{ padding: "40px" }}>
         <h1>Circuito não encontrado</h1>
-        <a href="/" style={{ marginTop: "20px", display: "inline-block" }}>
+        <a href="/pt" style={{ marginTop: "20px", display: "inline-block" }}>
           ← Voltar
         </a>
       </main>
@@ -145,7 +145,7 @@ export default async function CircuitoPage({ params }: Props) {
           </div>
         </section>
 
-        <a href="/" className="backLink">
+        <a href="/pt" className="backLink">
           ← Voltar à página inicial
         </a>
       </div>
