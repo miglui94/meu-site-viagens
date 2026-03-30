@@ -49,7 +49,8 @@ export default function Navbar() {
     const slug = pathname.replace("/pt/circuitos/", "");
     const englishSlug = slugMapPtToEn[slug] || slug;
     switchLanguageLink = `/en/circuits/${englishSlug}`;
-  } else if (pathname.startsWith("/en/circuits/")) {
+  } 
+  else if (pathname.startsWith("/en/circuits/")) {
     const slug = pathname.replace("/en/circuits/", "");
     const portugueseSlug = slugMapEnToPt[slug] || slug;
     switchLanguageLink = `/pt/circuitos/${portugueseSlug}`;
@@ -59,7 +60,7 @@ export default function Navbar() {
     <header className={`navbar ${showNavbar ? "navbarVisible" : "navbarHidden"}`}>
       <div className="container navbarInner">
         <Link href={homeLink} className="logo">
-          MoroccoDream
+          Berber Spirit Tours
         </Link>
 
         <div className="navRight">

@@ -11,7 +11,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="container footerInner">
         <div className="footerCopy">
-          © {new Date().getFullYear()} MoroccoDream.{" "}
+          © {new Date().getFullYear()} Berber Spirit Tours.{" "}
           {isEnglish ? "All rights reserved." : "Todos os direitos reservados."}
         </div>
       </div>
