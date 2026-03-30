@@ -246,8 +246,19 @@ textarea {
   line-height: 1.6;
 }
 
+.testimonialCard {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .testimonialCard p {
   font-style: italic;
+  flex-grow: 1;
+}
+
+.testimonialCard strong {
+  margin-top: 16px;
 }
 
 .contactSection {
@@ -310,100 +321,12 @@ textarea {
   }
 }
 
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 20;
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  transition: all 0.35s ease;
-}
-
-.navbarHidden {
-  opacity: 0;
-  transform: translateY(-100%);
-  pointer-events: none;
-}
-
-.navbarVisible {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-  background: rgba(20, 14, 10, 0.72);
-}
-
-.navbarInner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-height: var(--navbar-height);
-  gap: 20px;
-}
-
-.logo {
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
-  letter-spacing: 0.5px;
-}
-
-.navLinks {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-}
-
-.navLinks a {
-  color: white;
-  font-size: 15px;
-  opacity: 0.95;
-}
-
-.navLinks a:hover {
-  opacity: 1;
-}
-
-.navButton {
-  display: inline-block;
-  background: #a85c2c;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 999px;
-  font-weight: bold;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
 .navButton:hover {
   background: #8c4b21;
 }
 
 .hero {
   padding-top: 0;
-}
-
-@media (max-width: 900px) {
-  .navbarInner {
-    flex-direction: column;
-    justify-content: center;
-    padding: 14px 0;
-  }
-
-  .navLinks {
-    gap: 18px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .navButton {
-    display: none;
-  }
-
-  .hero {
-    padding-top: 0;
-    min-height: 100vh;
-  }
 }
 
 .tourCard {
@@ -578,19 +501,95 @@ textarea {
   color: rgba(255, 255, 255, 0.6);
 }
 
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.35s ease;
+}
+
+.navbarHidden {
+  opacity: 0;
+  transform: translateY(-100%);
+  pointer-events: none;
+}
+
+.navbarVisible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  background: rgba(20, 14, 10, 0.72);
+}
+
+.navbarInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: var(--navbar-height);
+  gap: 20px;
+}
+
+.logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.navRight {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.navLinks a {
+  color: white;
+  font-size: 15px;
+  opacity: 0.95;
+}
+
+.navLinks a:hover {
+  opacity: 1;
+}
+
+.navButton {
+  display: inline-block;
+  background: #a85c2c;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 999px;
+  font-weight: bold;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.navButton:hover {
+  background: #8c4b21;
+}
+
 .langSwitch {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .langButton {
   color: white;
   font-weight: 600;
   text-decoration: none;
-  margin-left: 20px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 6px;
+  white-space: nowrap;
   opacity: 0.85;
   transition: 0.2s ease;
 }
@@ -604,4 +603,63 @@ textarea {
   height: 12px;
   object-fit: cover;
   border-radius: 2px;
+}
+
+/* HERO */
+.hero {
+  padding-top: 0;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    padding-top: 0;
+    min-height: 100vh;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .navbarInner {
+    flex-direction: column;
+    justify-content: center;
+    padding: 14px 0;
+    gap: 10px;
+  }
+
+  .navRight {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: nowrap;
+  }
+
+  .navLinks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+  }
+
+  .navLinks a {
+    font-size: 14px;
+  }
+
+  .langSwitch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .langButton {
+    margin-left: 0;
+    padding: 4px;
+  }
+
+  .navButton {
+    display: none;
+  }
 }

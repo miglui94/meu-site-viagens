@@ -54,6 +54,7 @@ export default function Navbar() {
     const portugueseSlug = slugMapEnToPt[slug] || slug;
     switchLanguageLink = `/pt/circuitos/${portugueseSlug}`;
   }
+
   return (
     <header className={`navbar ${showNavbar ? "navbarVisible" : "navbarHidden"}`}>
       <div className="container navbarInner">
@@ -61,34 +62,36 @@ export default function Navbar() {
           MoroccoDream
         </Link>
 
-        <nav className="navLinks">
-          <Link href={homeLink}>{isEnglish ? "Home" : "Início"}</Link>
-          <Link href={toursLink}>{isEnglish ? "Tours" : "Circuitos"}</Link>
-          <Link href={contactLink}>{isEnglish ? "Contact" : "Contacto"}</Link>
-        </nav>
+        <div className="navRight">
+          <nav className="navLinks">
+            <Link href={homeLink}>{isEnglish ? "Home" : "Início"}</Link>
+            <Link href={toursLink}>{isEnglish ? "Tours" : "Circuitos"}</Link>
+            <Link href={contactLink}>{isEnglish ? "Contact" : "Contacto"}</Link>
+          </nav>
 
-        <div className="langSwitch">
-        <Link href={switchLanguageLink} className="langButton">
-            {isEnglish ? (
-            <>
-                <img
-                src="https://flagcdn.com/w20/gb.png"
-                alt="English"
-                className="flag"
-                />
-                EN
-            </>
-            ) : (
-            <>
-                <img
-                src="https://flagcdn.com/w20/pt.png"
-                alt="Português"
-                className="flag"
-                />
-                PT
-            </>
-            )}
-        </Link>
+          <div className="langSwitch">
+            <Link href={switchLanguageLink} className="langButton">
+              {isEnglish ? (
+                <>
+                  <img
+                    src="https://flagcdn.com/w20/pt.png"
+                    alt="Português"
+                    className="flag"
+                  />
+                  PT
+                </>
+              ) : (
+                <>
+                  <img
+                    src="https://flagcdn.com/w20/gb.png"
+                    alt="English"
+                    className="flag"
+                  />
+                  EN
+                </>
+              )}
+            </Link>
+          </div>
         </div>
 
         <Link href={contactLink} className="navButton">
